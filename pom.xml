@@ -11,6 +11,7 @@
     <groupId>com.jeojck</groupId>
     <artifactId>ImgToHtml</artifactId>
     <version>0.1</version>
+    <packaging>war</packaging>
     <name>ImgToHtml</name>
     <description>ImgToHtml</description>
     <properties>
