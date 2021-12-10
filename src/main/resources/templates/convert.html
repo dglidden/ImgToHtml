@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Converted</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+
+<div>Here's where the converted image should be:</div>
+
+<hr/>
+<div th:utext="${tableData}"/>
+<hr/>
+
+<div>It only took <span th:text="${convTime}"/>ms to convert.  Any slowness is your browser's fault.</div>
+
+</div><a th:href="@{/}">Do It Again! Do It Again!</a>
+
+</body>
+</html>

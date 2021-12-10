@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ImgToHtml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+
+<p th:text="${message}" th:if="${message ne null}" class="alert alert-primary"></p>
+
+<p>Convert an Image (PNG/JPG) to an HTML Table element (for stupid reasons).</p>
+
+<form action="#" th:action="@{/convert}" enctype="multipart/form-data" method="post">
+    Image to Convert: <input type="file" name="file"/><br/>
+    <input type="submit" value="Convert It"/>
+</form>
+
+<div>Anything larger than about 1k x 1k will most likely crash your browser.</div>
+<div>Don't blame me if your browser crashes because you uploaded a ridiculously big file.</div>
+
+</body>
+</html>

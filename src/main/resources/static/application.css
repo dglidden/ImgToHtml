@@ -1,0 +1,14 @@
+table.imgtable {
+    border-width: 0 0 0 0;
+    border-spacing: 0;
+    border-style: none none none none;
+    border-collapse: collapse;
+}
+table.imgtable td {
+    border-width: 0 0 0 0;
+    padding: 0 0 0 0;
+    border-style: none none none none;
+    width: 1px;
+    height: 1px;
+    -moz-border-radius: 0 0 0 0;
+}
