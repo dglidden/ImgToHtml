@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,12 +24,13 @@ public class ImgToHtmlController {
         this.converterService = converterService;
     }
 
-    @GetMapping("/")
+    @GetMapping(value = "/")
     public String index(Model model) {
+        log.info("Loading homepage");
         return "index";
     }
 
-    @PostMapping("/convert")
+    @PostMapping(value = "/convert")
     public String convert(@RequestParam("file")MultipartFile file, RedirectAttributes redirectAttributes, Model model) {
         if(file.isEmpty()) {
             redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
